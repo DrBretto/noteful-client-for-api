@@ -49,9 +49,10 @@ class App extends Component {
     });
   };
 
-  handleDeleteNote = (notes_id) => {
+  handleDeleteNote = (noteId) => {
+    console.log("App -> handleDeleteNote -> this.state.notes", this.state.notes)
     this.setState({
-      notes: this.state.notes.filter((note) => note.notes_id !== notes_id),
+      notes: this.state.notes.filter((note) => note.notes_id !== noteId),
     });
   };
 
